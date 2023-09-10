@@ -36,6 +36,8 @@ const profile = [
         profileImage: "./img/ss.jpeg",
         profileLink: "https://www.youtube.com/@Bigman_rtst"
         },
+
+    
 ];
 
 const slider = document.getElementById("slider");
@@ -85,7 +87,5 @@ nextButton.addEventListener("click", () => {
 function autoSlide() {
   showNextSlide();
 }
-
 autoSlideInterval = setInterval(autoSlide, 6000);
-
 updateSlide(currentIndex);
