@@ -45,11 +45,11 @@ const occupation = document.getElementById("occupation");
 const introduction = document.getElementById("introduction");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
-const body = document.body; // body 요소를 가져옵니다.
+const body = document.body; 
 
 let currentIndex = 0;
 let autoSlideInterval;
-const backgroundColors = ["#808080", "#964b00", "#553830", "#ccc", "#8b00ff"]; // 배경색 배열
+const backgroundColors = ["#808080", "#964b00", "#553830", "#ccc", "#8b00ff"]; 
 
 function updateSlide(index) {
   profileImage.src = profile[index].profileImage;
@@ -58,7 +58,7 @@ function updateSlide(index) {
   occupation.textContent = profile[index].occupation;
   introduction.textContent = profile[index].introduction;
   
-  // 배경색 변경
+  
   body.style.backgroundColor = backgroundColors[index];
 }
 
