@@ -36,8 +36,6 @@ const profile = [
         profileImage: "./img/ss.jpeg",
         profileLink: "https://www.youtube.com/@Bigman_rtst"
         },
-
-    
 ];
 
 const slider = document.getElementById("slider");
@@ -51,7 +49,7 @@ const body = document.body;
 
 let currentIndex = 0;
 let autoSlideInterval;
-const backgroundColors = ["#808080", "#964b00", "#553830", "#ccc", "#8b00ff"]; 
+const backgroundColors = ["#808080", "#964b00", "#553830", "#ccc", "#87ceeb"]; 
 
 function updateSlide(index) {
   profileImage.src = profile[index].profileImage;
@@ -60,7 +58,7 @@ function updateSlide(index) {
   occupation.textContent = profile[index].occupation;
   introduction.textContent = profile[index].introduction;
   
-  
+
   body.style.backgroundColor = backgroundColors[index];
 }
 
@@ -87,5 +85,7 @@ nextButton.addEventListener("click", () => {
 function autoSlide() {
   showNextSlide();
 }
+
 autoSlideInterval = setInterval(autoSlide, 6000);
+
 updateSlide(currentIndex);
