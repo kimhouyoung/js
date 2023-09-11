@@ -61,22 +61,18 @@ function updateSlide(index) {
 
   body.style.backgroundColor = backgroundColors[index];
 }
-
 function showPrevSlide() {
   currentIndex = (currentIndex - 1 + profile.length) % profile.length;
   updateSlide(currentIndex);
 }
-
 prevButton.addEventListener("click", () => {
   clearInterval(autoSlideInterval);
   showPrevSlide();
 });
-
 function showNextSlide() {
   currentIndex = (currentIndex + 1) % profile.length;
   updateSlide(currentIndex);
 }
-
 nextButton.addEventListener("click", () => {
   clearInterval(autoSlideInterval);
   showNextSlide();
@@ -86,6 +82,8 @@ function autoSlide() {
   showNextSlide();
 }
 
+
 autoSlideInterval = setInterval(autoSlide, 6000);
+
 
 updateSlide(currentIndex);
